@@ -28,6 +28,9 @@ To add a new dataset create a new config file in the data_configs.py file and ad
 
 The main entry point is `training_n_step.py`.
 
+The repostiory uses `uv` for env managment. uv run should automatically install any missing dependencies.
+
+The code is tested and setup for python 3.12 with torch 2.10 and Cuda 12.8
 Example:
 
 ```bash
