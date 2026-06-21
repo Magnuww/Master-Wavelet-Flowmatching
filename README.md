@@ -6,10 +6,11 @@ This is the repository for the code of the masters thesis "INSERT NAME HERE".
 
 The datasets used in this thesis are not included in this repository, but can be obtained from the following sources:
 
-- Dataset 1: [INSERT LINK HERE]
-- Dataset 2: [INSERT LINK HERE]
-- Dataset 3: [INSERT LINK HERE]
-  The code is organized into the following directories:
+- stock 1: [https://www.kaggle.com/datasets/varpit94/google-stock-data]
+- EEG 2: [https://archive.ics.uci.edu/dataset/264/eeg+eye+state]
+- Dataset 3: [https://github.com/zhouhaoyi/ETDataset/tree/main]
+
+The code is organized into the following directories:
 
 training_n_step.py is the main script for training the model. It contains the command line arguments, and does model setup.
 
