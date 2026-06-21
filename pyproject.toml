@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "master-cleaned-repo"
+version = "0.1.0"
+description = "Time-series flow matching training and evaluation code."
+readme = "README.md"
+requires-python = "==3.12.*"
+dependencies = [
+    "dtaidistance",
+    "flow-matching",
+    "h5py",
+    "matplotlib",
+    "mgzip",
+    "mlflow",
+    "numpy",
+    "pandas",
+    "POT",
+    "ptwt",
+    "pydantic",
+    "PyWavelets",
+    "scikit-learn",
+    "scipy",
+    "seaborn",
+    "tensorflow",
+    "tqdm",
+    "wandb",
+    "torch==2.10.0+cu128",
+    "torchvision",
+]
+
+[project.optional-dependencies]
+dev = [
+    "build",
+    "pip-tools",
+    "pytest",
+]
+
+[project.scripts]
+train-n-step = "training_n_step:main"
+
+[tool.setuptools]
+py-modules = ["fm_training", "training_n_step"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["data*", "metrics*", "models*", "utils*"]
+namespaces = true
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu128" }
+torchvision = { index = "pytorch-cu128" }
