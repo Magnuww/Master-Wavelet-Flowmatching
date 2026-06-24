@@ -3,7 +3,7 @@ import numpy as np
 from sklearn.metrics.pairwise import rbf_kernel
 
 
-def calculate_mmd(X, Y):
+def calculate_mmd(X, Y, squared=False):
     gammas = [0.0025, 0.005, 0.01, 0.02, 0.05, 0.1]
 
     XX = np.zeros((X.shape[0], X.shape[0]))
@@ -23,4 +23,7 @@ def calculate_mmd(X, Y):
     XY /= len(gammas)
 
     mmd = np.mean(XX + YY - 2 * XY)
-    return mmd
+    if squared:
+        return mmd
+    else:
+        return np.sqrt(max(mmd,0))
