@@ -13,7 +13,7 @@ Code for calculating Context_FID
 
 Based on the implementation from the papers:
 
-Sigdiffusions: https://arxiv.org/abs/2406.10354
+Diffusion-ts: https://arxiv.org/abs/2403.01742
 
 Waveletdiff: https://arxiv.org/abs/2510.11839
 
