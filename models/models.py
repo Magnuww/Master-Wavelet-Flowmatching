@@ -312,7 +312,7 @@ class SimpleMLPODE(nn.Module, NamedODE):
         return out
 
 class IdentityODE(nn.Module, NamedODE):
-    def __init__(self, input_template : Tensor) -> None:
+    def __init__(self, input_template : Tensor, cond_template : Tensor) -> None:
         super().__init__()
         self._name = "IdentityODE"
     def forward(self, x, t, c=None):
