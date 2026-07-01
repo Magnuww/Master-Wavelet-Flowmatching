@@ -1,6 +1,6 @@
 # master-cleaned-repo
 
-This is the repository for the code of the masters thesis "INSERT NAME HERE".
+This is the repository for the code of the masters thesis "Wavelet-Domain MLPs for Efficient Synthetic Time Series Generation via Flow Matching".
 
 # datasets
 
